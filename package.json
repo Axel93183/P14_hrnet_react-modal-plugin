@@ -1,8 +1,12 @@
 {
   "name": "react-modal-plugin-hrnet-agmx",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "react modal plugin",
   "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Axel93183/P14_hrnet_react-modal-plugin"
+  },
   "files": [
     "lib"
   ],
@@ -12,6 +16,9 @@
   },
   "keywords": [
     "react",
+    "modal",
+    "plugin",
+    "hrnet",
     "react-modal",
     "react-modal-plugin",
     "react-modal-plugin-hrnet"
