@@ -1,6 +1,6 @@
 {
   "name": "react-modal-plugin-hrnet-agmx",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "react modal plugin",
   "main": "lib/index.js",
   "repository": {
@@ -8,7 +8,8 @@
     "url": "https://github.com/Axel93183/P14_hrnet_react-modal-plugin"
   },
   "files": [
-    "lib"
+    "lib",
+    "src/styles"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
