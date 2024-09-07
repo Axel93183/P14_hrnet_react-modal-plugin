@@ -1,0 +1,30 @@
+{
+  "name": "react-modal-plugin-hrnet-agmx",
+  "version": "1.0.0",
+  "description": "react modal plugin",
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src --out-dir lib"
+  },
+  "keywords": [
+    "react",
+    "react-modal",
+    "react-modal-plugin",
+    "react-modal-plugin-hrnet"
+  ],
+  "author": "agmx183",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-modal": "^3.16.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.25.6",
+    "@babel/core": "^7.25.2",
+    "@babel/preset-react": "^7.24.7"
+  }
+}
