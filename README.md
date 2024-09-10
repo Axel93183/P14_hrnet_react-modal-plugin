@@ -1,6 +1,6 @@
 # react-modal-plugin-hrnet-agmx
 
-A React plugin for displaying modals with a fade effect.
+A React plugin for displaying modals with a fade effect and customizable styles.
 
 ## Installation
 
@@ -27,9 +27,16 @@ const App = () => {
   return (
     <div>
       <button onClick={openModal}>Open Modal</button>
-      <ModalComponent isOpen={isModalOpen} onClose={closeModal}>
+      <ModalComponent
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        customOverlayClassName="my-custom-overlay"
+        customContentClassName="my-custom-content"
+        customOverlayStyle={{ backgroundColor: "rgba(0,0,0,0.5)" }}
+        customContentStyle={{ padding: "20px", borderRadius: "10px" }}
+      >
         <h2>Example Modal</h2>
-        <p>This is an example of a modal component.</p>
+        <p>This is an example of a modal component with customizable styles.</p>
         <button onClick={closeModal}>Close</button>
       </ModalComponent>
     </div>
@@ -45,7 +52,7 @@ export default App;
 
 - **Name**: `react-modal-plugin-hrnet-agmx`
 - **Version**: `1.0.8`
-- **Description**: A React modal plugin with fade effect
+- **Description**: A React modal plugin with fade effect and customizable styles
 - **Main**: `lib/index.js`
 - **Repository**: [GitHub Repository](https://github.com/Axel93183/P14_hrnet_react-modal-plugin)
 - **Files**: Includes only the `lib` directory
