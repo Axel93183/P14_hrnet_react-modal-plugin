@@ -9,9 +9,21 @@ Modal.setAppElement("#root");
  * @param {boolean} props.isOpen - Whether the modal is open
  * @param {Function} props.onClose - Function to close the modal
  * @param {ReactNode} props.children - The content to display inside the modal
+ * @param {string} props.customOverlayClassName - Custom class for overlay
+ * @param {string} props.customContentClassName - Custom class for modal content
+ * @param {Object} props.customOverlayStyle - Custom styles for overlay (inline)
+ * @param {Object} props.customContentStyle - Custom styles for modal content (inline)
  * @returns {JSX.Element} The ModalComponent
  */
-const ModalComponent = ({ isOpen, onClose, children }) => {
+const ModalComponent = ({
+  isOpen,
+  onClose,
+  children,
+  customOverlayClassName = "",
+  customContentClassName = "",
+  customOverlayStyle = {},
+  customContentStyle = {},
+}) => {
   const [fadeClass, setFadeClass] = useState("");
 
   useEffect(() => {
@@ -26,8 +38,10 @@ const ModalComponent = ({ isOpen, onClose, children }) => {
     <Modal
       isOpen={isOpen}
       onRequestClose={onClose}
-      overlayClassName={`modal-overlay ${fadeClass}`}
-      className="modal-content"
+      overlayClassName={`modal-overlay ${fadeClass} ${customOverlayClassName}`}
+      className={`modal-content ${customContentClassName}`}
+      overlayStyle={{ ...customOverlayStyle }}
+      style={{ content: { ...customContentStyle } }}
       contentLabel="Employee Created"
     >
       {children}
